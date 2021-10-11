@@ -1,0 +1,9 @@
+corpus:
+  paths: [my_resources/corpus/my_corpus.txt]
+  weights: [1, 1]
+
+font:
+  paths: [my_resources/font]
+  weights: [1]
+  size: [10, 20, 30, 40]
+  bold: 0.5

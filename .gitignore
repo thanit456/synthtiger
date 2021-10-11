@@ -104,3 +104,12 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+# dataset 
+multi-lines-results/
+my-banks/
+my-banks-v2/
+*.zip
+my-singleline-results/
+my-results/
+results/
