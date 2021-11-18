@@ -11,13 +11,13 @@ corpus:
   weights: [1, 0]
   args:
     # length augmentable corpus
-    - paths: [my_resources/corpus/my_corpus.txt, my_resources/corpus/my_corpus2.txt]
-      weights: [1, 1]
-      min_length: 1
-      max_length: 25
+    - paths: [my_resources/corpus/account.txt, my_resources/corpus/bankname.txt, my_resources/corpus/th_dict.txt]
+      weights: [1, 1, 1]
+      min_length: 7
+      max_length: 30
       textcase: 1
       augmentation: 0.1
-      augmentation_length: [1, 25]
+      augmentation_length: [1, 30]
     # char augmentable corpus
     - paths: []
       weights: []
@@ -30,7 +30,7 @@ corpus:
 font:
   paths: [my_resources/font]
   weights: [1]
-  size: [40, 80]
+  size: [20, 40, 80]
   bold: 0.5
 
 texture:
@@ -43,7 +43,7 @@ texture:
     crop: 1
 
 colormap:
-  paths: [resources/colormap/iiit5k_gray.txt]
+  paths: [my_resources/colormap/bank_colormap.txt]
   weights: [1]
   alpha: [1, 1]
   colorize: 1
