@@ -11,8 +11,8 @@ corpus:
   weights: [1, 0]
   args:
     # length augmentable corpus
-    - paths: [my_resources/corpus/bankname.txt, my_resources/corpus/account.txt, my_resources/corpus/bank_words.txt]
-      weights: [1, 1, 1]
+    - paths: [my_resources/corpus/bankname.txt, my_resources/corpus/account.txt, my_resources/corpus/bank_words.txt, my_resources/corpus/real-data-corpus-texts.txt, my_resources/corpus/real-data-corpus-words.txt]
+      weights: [1, 1, 1, 2, 2]
       min_length: 1
       max_length: 50 
       textcase: 1
@@ -90,11 +90,11 @@ style:
         angle: [0, 360]
         color:
           alpha: [0.3, 0.7]
-      # # text extrusion
-      # - length: [1, 12]
-      #   angle: [0, 360]
-      #   color:
-      #     alpha: [1, 1]
+      # text extrusion
+      - length: [1, 12]
+        angle: [0, 360]
+        color:
+          alpha: [1, 1]
 
 transform:
   prob: 0
