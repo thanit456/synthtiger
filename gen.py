@@ -23,7 +23,7 @@ def produce(args, req):
 
 
 def consume(args, req, res):
-    random.seed()
+    random.seed(123)
     np.random.seed()
 
     template = utils.read_template(args.template)

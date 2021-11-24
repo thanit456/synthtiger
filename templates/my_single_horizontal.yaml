@@ -11,12 +11,12 @@ corpus:
   weights: [1, 0]
   args:
     # length augmentable corpus
-    - paths: [my_resources/corpus/bankname.txt, my_resources/corpus/account.txt, my_resources/corpus/bank_words.txt]
-      weights: [1, 1, 1]
+    - paths: [single_resources/corpus/my_corpus.txt]
+      weights: [1]
       min_length: 1
       max_length: 50 
       textcase: 1
-      augmentation: 0.1
+      augmentation: 0
       augmentation_length: [1, 50]
     # char augmentable corpus
     - paths: []
@@ -25,18 +25,18 @@ corpus:
       max_length: 50
       textcase: 1
       augmentation: 0
-      augmentation_charset: my_resources/charset/th_letters.txt
+      augmentation_charset: single_resources/charset/th_letters.txt
 
 font:
-  paths: [my_resources/font]
+  paths: [single_resources/font]
   weights: [1]
   size: [40, 80]
   bold: 0.5
 
 texture:
-  prob: 0.5
+  prob: 0
   args:
-    paths: [my_resources/image]
+    paths: [single_resources/image]
     weights: [1]
     alpha: [0, 1]
     grayscale: 1
@@ -77,7 +77,7 @@ layout:
       upward: 0.5
 
 style:
-  prob: 1
+  prob: 0
   args:
     weights: [1, 2, 2]
     args:
@@ -125,7 +125,7 @@ transform:
         ccw: 0.5
 
 margin:
-  prob: 1
+  prob: 0
   args:
     top: [0, 10]
     bottom: [0, 10]
@@ -135,19 +135,19 @@ margin:
 postprocess:
   args:
     # gaussian noise
-    - prob: 1
+    - prob: 0
       args:
         scale: [4, 8]
         per_channel: 0
     # gaussian blur
-    - prob: 0.5
+    - prob: 0
       args:
         sigma: [0, 2]
     # resample
-    - prob: 0.1
+    - prob: 0
       args:
         size: [0.4, 0.4]
     # median blur
-    - prob: 0.5 
+    - prob: 0
       args:
         k: [1, 1]

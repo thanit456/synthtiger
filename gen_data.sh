@@ -1,3 +1,3 @@
 python gen.py --template templates/default.py \
---config templates/my_singleline.yaml \
---output dataset/my-banks-v5 --worker 6 --count 1000000
+--config templates/my_single_horizontal_border.yaml \
+--output test_data --worker 8 --count 100
